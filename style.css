@@ -1,0 +1,111 @@
+body{
+    background: linear-gradient(90deg,rgba(107, 126, 115, 1) 0%, rgba(112, 145, 125, 1) 28%, rgba(105, 184, 136, 1) 100%);
+}
+
+.main{
+    width: 267px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 150px auto;
+}
+
+#display{
+    width: 100%;
+    height: 65px;
+    font-size: 27px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #141414;
+    background-color: #9cbea7;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    border: none;
+    text-align: right;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#display:focus{
+    outline: none;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.btn, .ac, .ce, .ans{
+    padding: 10px;
+    height: 70px;
+    width: 70px;
+    background-color: #d3d3d3;
+    color: #141414;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+.zero{
+    padding: 10px;
+    height: 70px;
+    grid-column: span 2;
+    background-color: #d3d3d3;
+    color: #141414;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+.btn:hover, .zero:hover{
+    background-color: #d3d3d3e3;
+    cursor: pointer;
+}
+
+.ac, .ce{
+    background-color: #ce604c;
+}
+.ac:hover, .ce:hover{
+    background-color: #ce604cdc;
+    cursor: pointer;
+}
+
+.op, .per, .ans{
+    background-color: #cec54c;
+}
+.op:hover, .per:hover, .ans:hover{
+    background-color: #cec54cdc;
+    cursor: pointer;   
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    .main{
+        width: 221px;
+        margin: 50px auto;
+    }
+
+    #display{
+        height: 58px;
+        font-size: 22px;
+    }
+
+    .btns{
+        gap: 6px;
+    }
+
+    .btn, .ac, .ce, .ans{
+        height: 60px;
+        width: 60px;
+        font-size: 18px;
+    }
+
+    .zero{
+        height: 60px;
+        font-size: 18px;
+    }
+}
