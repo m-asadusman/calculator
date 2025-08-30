@@ -1,7 +1,18 @@
 var display = document.getElementById('display');
+var operators = ['+','-','/','%'];
+var power = '**';
 
 function btn(a){
-    display.value += a;
+    if (operators.includes(display.value.slice(-1)) && operators.includes(a)){
+        return;
+    }
+    if (power.includes(display.value.slice(-2)) && power.includes(a)){
+        return;
+    }
+    if (power.includes(display.value.slice(-2)) && operators.includes(a)){
+        return;
+    }
+    display.value += a
 }
 
 function ac(){
@@ -15,4 +26,3 @@ function ce(){
 function ans(){
     display.value = eval(display.value);
 }
-
