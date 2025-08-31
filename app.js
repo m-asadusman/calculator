@@ -6,12 +6,6 @@ function btn(a){
     if (operators.includes(display.value.slice(-1)) && operators.includes(a)){
         return;
     }
-    if (power.includes(display.value.slice(-2)) && power.includes(a)){
-        return;
-    }
-    if (power.includes(display.value.slice(-2)) && operators.includes(a)){
-        return;
-    }
     display.value += a
 }
 
@@ -26,3 +20,4 @@ function ce(){
 function ans(){
     display.value = eval(display.value);
 }
+
