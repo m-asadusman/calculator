@@ -1,5 +1,5 @@
 var display = document.getElementById('display');
-var operators = ['+','-','/','%'];
+var operators = ['+','-','*','/','%'];
 var power = '**';
 
 function btn(a){
@@ -20,4 +20,5 @@ function ce(){
 function ans(){
     display.value = eval(display.value);
 }
+
 
